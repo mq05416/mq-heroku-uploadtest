@@ -93,7 +93,8 @@ public class ProductAction extends ActionSupport implements ServletRequestAware 
 			 * String filePath = servletRequest.getSession().getServletContext()
 			 * .getRealPath("/") + File.separator + uploadFolder;
 			 */
-			String filePath = uploadFolder;
+			/*String filePath = uploadFolder;*/
+			String filePath = "uploads"; // thu muc de upload
 			System.out
 					.println("-----------Server path------------:" + filePath);
 			String fileName = System.currentTimeMillis()
