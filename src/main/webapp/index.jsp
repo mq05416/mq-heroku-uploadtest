@@ -9,5 +9,6 @@
 <body>
 	<h2>Hello Luan</h2>
 	<a href="home">Welcome</a>
+	<a href="hello">Test tham so postgresql url</a>
 </body>
 </html>
