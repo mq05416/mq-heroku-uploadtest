@@ -6,27 +6,27 @@
 <hibernate-configuration>
 	<session-factory>
 		<!-- Database connection settings -->
-		<!-- <property name="connection.driver_class">com.mysql.jdbc.Driver</property> 
-			<property name="connection.url">jdbc:mysql://localhost:3306/mss?autoReconnect=true&amp;useUnicode=true&amp;createDatabaseIfNotExist=true&amp;characterEncoding=utf-8</property> 
-			<property name="connection.username">root</property> <property name="connection.password"></property> -->
+	
 
 
 
-		<!-- <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="connection.url">jdbc:mysql://127.5.138.2:3306/mssstruts2hibernatetilesv2?autoReconnect=true&amp;useUnicode=true&amp;createDatabaseIfNotExist=true&amp;characterEncoding=UTF-8</property>
-		<property name="connection.username">adminp6Sy8mY</property>
-		<property name="connection.password">LVlrCU9sTl9Z</property> -->
 		
-		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="connection.url">jdbc:mysql://localhost/mssstruts2hibernatetilesv2?autoReconnect=true&amp;useUnicode=true&amp;createDatabaseIfNotExist=true&amp;characterEncoding=UTF-8</property>
-		<property name="connection.username">root</property>
-		<property name="connection.password"></property>
+		
+		<property name="connection.driver_class">org.postgresql.Driver</property>
+		<property name="connection.url">jdbc:postgresql://ec2-54-225-101-191.compute-1.amazonaws.com/dbj9dnjr96r8kn</property>
+		<property name="connection.username">tkxdahglnvulfr</property>
+		<property name="connection.password">oD8fw18qS4hFh8j3-I2fXfP3M9</property>
+		
+		
+		
+
+		<!-- SQL dialect -->
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
 
 		<!-- JDBC connection pool (use the built-in) -->
 		<property name="connection.pool_size">1</property>
 
-		<!-- SQL dialect -->
-		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		
 
 		<!-- Enable Hibernate's automatic session context management -->
 		<property name="current_session_context_class">thread</property>
