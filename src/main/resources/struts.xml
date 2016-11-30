@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.custom.i18n.resources" value="ApplicationResources" />
+	<constant name="struts.action.excludePattern" value="/uploads/*" />
+
+	<package name="default" extends="struts-default" namespace="/">
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+		<action name="welcome" class="struts2.TestAction">
+
+			<result name="success" type="tiles">/adminCategory.tiles</result>
+			<result name="error">Login.jsp</result>
+		</action>
+
+
+
+		<action name="home" class="struts2.HomeAction" method="execute">
+
+			<result name="success" type="tiles">/home.tiles</result>
+			<result name="error">/error.jsp</result>
+		</action>
+
+
+		<action name="products" class="struts2.ProductAction" method="execute">
+
+			<result name="success" type="tiles">/products.tiles</result>
+			<result name="error">/error.jsp</result>
+		</action>
+
+		<action name="product_detail" class="struts2.ProductAction"
+			method="product_detail">
+
+			<result name="success" type="tiles">/product_details.tiles</result>
+			<result name="error">/error.jsp</result>
+		</action>
+
+
+		<action name="signupview" class="struts2.HrefAction" method="signup_view">
+
+			<result name="success" type="tiles">/register.tiles</result>
+			<result name="error">/error.jsp</result>
+		</action>
+
+		<action name="loginview" class="struts2.HrefAction" method="login_view">
+
+			<result name="success" type="tiles">/login.tiles</result>
+			<result name="error">/error.jsp</result>
+		</action>
+
+		<action name="register" class="struts2.AuthenticationAction"
+			method="register">
+
+			<result name="success" type="tiles">/home.tiles</result>
+			<result name="input" type="tiles">/register.tiles</result>
+		</action>
+
+		<action name="login" class="struts2.AuthenticationAction"
+			method="login">
+
+			<result name="success" type="tiles">/home.tiles</result>
+			<result name="error" type="tiles">/login.tiles</result>
+		</action>
+
+		<action name="signout" class="struts2.AuthenticationAction"
+			method="signout">
+
+			<result name="success" type="tiles">/home.tiles</result>
+			<result name="error" type="tiles">/login.tiles</result>
+		</action>
+
+
+		<action name="adminview" class="struts2.AdminAction" method="admin_view">
+
+			<result name="success" type="tiles">/adminDashboard.tiles</result>
+			<result name="error" type="tiles">/login.tiles</result>
+		</action>
+
+
+		<action name="add_category_view" class="struts2.CategoryAction"
+			method="execute">
+
+			<result name="success" type="tiles">/adminCategory.tiles</result>
+			<result name="error">Login.jsp</result>
+		</action>
+		<action name="add_category" class="struts2.CategoryAction"
+			method="add">
+
+			<result name="success" type="tiles">/adminCategory.tiles</result>
+			<result name="error">Login.jsp</result>
+		</action>
+
+		<action name="edit_category_view" class="struts2.CategoryAction"
+			method="edit_view">
+
+			<result name="success" type="tiles">/adminEditCategory.tiles</result>
+			<result name="error">Login.jsp</result>
+		</action>
+		<action name="editcategory" class="struts2.CategoryAction"
+			method="editcategory">
+
+			<result name="success" type="tiles">/adminEditCategory.tiles</result>
+			<result name="error">Login.jsp</result>
+		</action>
+
+
+		<action name="delete_category" class="struts2.CategoryAction"
+			method="delete">
+
+			<result name="success" type="tiles">/adminCategory.tiles</result>
+			<result name="error">Login.jsp</result>
+		</action>
+
+
+
+		<action name="add_product_view" class="struts2.ProductAction"
+			method="add_product_view">
+
+			<result name="success" type="tiles">/adminProduct.tiles</result>
+			<result name="error">Login.jsp</result>
+		</action>
+
+		<action name="add_product" class="struts2.ProductAction"
+			method="add_product">
+
+			<result name="success" type="tiles">/adminProduct.tiles</result>
+			<result name="error">Login.jsp</result>
+			<result name="input" type="tiles">/adminProduct.tiles</result>
+		</action>
+
+
+		<action name="edit_product_view" class="struts2.ProductAction"
+			method="edit_product_view">
+
+			<result name="success" type="tiles">/adminEditProduct.tiles</result>
+			<result name="error">Login.jsp</result>
+		</action>
+
+		<action name="edit_product" class="struts2.ProductAction"
+			method="edit_product">
+
+			<result name="success" type="tiles">/adminEditProduct.tiles</result>
+			<result name="error">Login.jsp</result>
+		</action>
+
+
+		<action name="delete_product" class="struts2.ProductAction"
+			method="delete_product">
+
+			<result name="success" type="tiles">/adminProduct.tiles</result>
+			<result name="error">Login.jsp</result>
+			<result name="input" type="tiles">/adminProduct.tiles</result>
+		</action>
+
+		<action name="addItemToCart" class="struts2.CartAction" method="execute">
+
+			<result name="success" type="tiles">/carts.tiles</result>
+			<result name="error">Login.jsp</result>
+			<result name="input" type="tiles">/adminProduct.tiles</result>
+		</action>
+
+
+
+	</package>
+	
+</struts>

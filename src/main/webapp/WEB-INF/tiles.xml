@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="baseLayout" template="/WEB-INF/pages/BaseLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="nav" value="/WEB-INF/pages/Nav.jsp" />
+		<put-attribute name="jumbotron" value="/WEB-INF/pages/Jumbotron.jsp" />
+		<put-attribute name="category" value="/WEB-INF/pages/Category.jsp" />
+		<put-attribute name="news" value="/WEB-INF/pages/News.jsp" />
+		<put-attribute name="carousel" value="/WEB-INF/pages/Carousel.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/pages/Footer.jsp" />
+	</definition>
+
+	<definition name="/home.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Motor sport Saigon" />
+		<!-- <put-attribute name="body" value="/WEB-INF/pages/Honda.jsp" /> -->
+
+
+	</definition>
+	
+	<definition name="/register.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Motor sport Saigon - Register" />
+		<put-attribute name="carousel" value="" />
+		<put-attribute name="body" value="/WEB-INF/pages/Register.jsp" />
+		
+
+
+	</definition>
+	
+	
+	<definition name="/login.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Motor sport Saigon - Login" />
+		<put-attribute name="carousel" value="" />
+		<put-attribute name="body" value="/WEB-INF/pages/Login.jsp" />
+		
+
+
+	</definition>
+	
+	
+	<definition name="/products.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Motor sport Saigon - Login" />
+		<put-attribute name="carousel" value="" />
+		<put-attribute name="body" value="/WEB-INF/pages/Product.jsp" />
+		
+
+
+	</definition>
+	
+	<definition name="/product_details.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Sản phẩm chi tiết" />
+		<put-attribute name="carousel" value="" />
+		<put-attribute name="body" value="/WEB-INF/pages/Product_Detail.jsp" />
+		
+
+
+	</definition>
+	
+	<definition name="/carts.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Giỏ hàng" />
+		<put-attribute name="carousel" value="" />
+		<put-attribute name="body" value="/WEB-INF/pages/Cart.jsp" />
+		
+
+
+	</definition>
+
+	<definition name="adminbaseLayout" template="/admin/pages/Admin_BaseLayout.jsp">
+		<put-attribute name="admintitle" value="" />
+		<put-attribute name="adminheader" value="/admin/pages/Admin_Header.jsp" />
+		<put-attribute name="adminnav" value="/admin/pages/Admin_Nav.jsp" />
+		<put-attribute name="adminbody" value="/admin/pages/Admin_Dashboard.jsp" />
+
+	</definition>
+
+
+	<definition name="/adminDashboard.tiles" extends="adminbaseLayout">
+		<put-attribute name="admintitle" value="Dashboard" />
+
+
+	</definition>
+	<definition name="/adminCategory.tiles" extends="adminbaseLayout">
+		<put-attribute name="admintitle" value="Category" />
+		<put-attribute name="adminbody" value="/admin/pages/Admin_Category.jsp" />
+
+
+	</definition>
+	
+	<definition name="/adminEditCategory.tiles" extends="adminbaseLayout">
+		<put-attribute name="admintitle" value="Category" />
+		<put-attribute name="adminbody" value="/admin/pages/Admin_EditCategory.jsp" />
+
+
+	</definition>
+	
+	
+	<definition name="/adminProduct.tiles" extends="adminbaseLayout">
+		<put-attribute name="admintitle" value="Product" />
+		<put-attribute name="adminbody" value="/admin/pages/Admin_Product.jsp" />
+
+
+	</definition>
+	
+	<definition name="/adminEditProduct.tiles" extends="adminbaseLayout">
+		<put-attribute name="admintitle" value="Edit Product" />
+		<put-attribute name="adminbody" value="/admin/pages/Admin_EditProduct.jsp" />
+
+
+	</definition>
+
+
+	<definition name="/welcome.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Welcome" />
+
+		<put-attribute name="body" value="/WEB-INF/pages/Welcome.jsp" />
+	</definition>
+
+	<definition name="/customer.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Customer Form" />
+		<put-attribute name="body" value="/Customer.jsp" />
+	</definition>
+	<definition name="/customer.success.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Customer Added" />
+		<put-attribute name="body" value="/SuccessCustomer.jsp" />
+	</definition>
+
+</tiles-definitions>
