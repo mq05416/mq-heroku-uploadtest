@@ -17,6 +17,23 @@
 		</div>
 		<!-- /.row -->
 		<div class="row">
+			<h2>
+				File Name :
+				<s:property value="fileUploadFileName" />
+			</h2>
+
+			<h2>
+				Content Type :
+				<s:property value="fileUploadContentType" />
+			</h2>
+
+			<h2>
+				File :
+				<s:property value="productImg" />
+			</h2>
+		</div>
+
+		<div class="row">
 			<div class="col-lg-12">
 				<div class="panel panel-default">
 					<div class="panel-heading">DataTables Advanced Tables</div>
@@ -143,7 +160,7 @@
 									</div>
 
 									<div>
-										<s:file name="userImage" label="User Image" />
+										<s:file name="productImg" label="Product Image" />
 									</div>
 									<div class="form-group">
 										<label>Giá cả</label>
